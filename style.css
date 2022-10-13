@@ -67,4 +67,9 @@ video {
 
 ::-webkit-scrollbar  {
     display: none;
-  }
+ }
+
+#arrow {
+    display: flex;
+    justify-content: center;
+}
