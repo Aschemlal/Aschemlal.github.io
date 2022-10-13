@@ -8,4 +8,14 @@ document.addEventListener("mousemove", function(e) {
     div.style.top = y + "px"
 })
 
+let video = document.getElementById("video")
 
+
+
+titre.addEventListener("mouseover", function(e) {
+    video.classList.add("oui")
+    e.stopPropagation()
+})
+document.body.addEventListener("mouseover", function(){
+    video.classList.remove("oui")
+})
