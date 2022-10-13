@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     width: 95%;
@@ -31,20 +32,38 @@ body {
     font-family: arial;
     box-sizing: border-box;
     padding: 10px;
+}
+span {
     box-sizing: border-box;
     transition: .5s;
+
 }
 
-
-.titre:hover {
+span:hover {
     color: black;
     transition: .5s;
     cursor: none;
 
 }
 
+video {
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    position: absolute;
+    z-index: 100 !important;
+    display: none;
+
+}
 
 
+.oui {
+    display: flex;
+    opacity: 1;
+    width: 230px;
+    height: 230px;
+    transition: 1s ease;
+}
 
 ::-webkit-scrollbar  {
     display: none;
