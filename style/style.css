@@ -73,8 +73,8 @@ main {
     background-color: #f7f7f7;
     background-image: linear-gradient(160deg, #ffffff 0%, #eaf1f0 100%);
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-size: larger;
     font-family: 'Ubuntu', sans-serif;
