@@ -6,6 +6,7 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
+    transition: 2s;
 
 }
 .mouse {
@@ -81,6 +82,7 @@ main {
     animation: bouge 2s ease 0s infinite normal forwards;    
 }
 
+
 main:hover {
     background-color: black;
 }
@@ -120,4 +122,8 @@ main:hover {
         left: 15%;
         font-size: 17px;
     }
+}
+
+.blanc:hover{
+    color: white !important;
 }
