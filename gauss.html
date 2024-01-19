@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gaussian integral.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  height: 100vh;
+}
+
+
+.menu {
+  display: none;
+}
+</style>
+<script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+</script>
+<link rel="shortcut icon" href="icons8-penrose-square-96.png" type="image/x-icon">
+
+</head>
+<body>
+
+
+<div class="w3-sand w3-white w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tímaios</span></h5>
+    <p>
+        Here, we will calculate Gauss integral:
+    \[ G = \int_0^{+\infty} e^{-t^{2}} dt \]
+    And for this we gonna make it more complicated and easier :)
+    \[ I = \int_{\mathbf{R}^2_+} e^{-(x^{2}+y^{2})} d(x,y) \]
+    Using Fubini theorem, we get:
+    \[ I = \int_{\mathbf{R}_+} \int_{\mathbf{R}_+} e^{-(x^{2}+y^{2})} dx dy \]
+    \[ I = \int_{\mathbf{R}_+} e^{-x^{2}} dx \times \int_{\mathbf{R}_+} e^{-y^{2}}dy \]
+    And yes:
+    \[ I = G^2 \]
+    And by using the coordinates \( (\rho, \theta) \)
+    \[ x = \rho cos \theta \]
+    \[ y = \rho sin \theta \]
+    And we have the determinant of the jacobian matrix:
+    \[ |J| = 
+    \begin{pmatrix}
+    \frac{\partial x}{\partial \rho} & \frac{\partial x}{\partial \theta}\\ 
+    \frac{\partial y}{\partial \rho} & \frac{\partial y}{\partial \theta}
+    \end{pmatrix} = 
+     \begin{pmatrix}
+    cos\theta & -\rho sin\theta\\ 
+    sin\theta & \rho cos\theta
+    \end{pmatrix} = \rho \]
+    Therefore:
+    \[  I = \int_0^{\infty} \int_0^{\pi/2} \rho e^{-\rho^2}d \rho d \theta \]
+    \[ = \frac{\pi}{2} \int_0^{\infty} \rho e^{-\rho^2}d \rho  \]
+    \[ = \frac{\pi}{2}  \frac{1}{2} [ e^{-\rho^2}]_0^{\infty} = \frac{\pi}{4}  \]
+    
+    </p>
+    <p>
+        And hence, we have our integral:
+        \[ G = \sqrt{I} = \frac{\sqrt{\pi}}{2}  \]
+    </p>
+  </div>
+</div>
+
+
+
+
+
+</div>
+<footer class="w3-center w3-grayscale w3-padding-48 w3-large">
+</footer>
+
+
+</body>
+</html>
