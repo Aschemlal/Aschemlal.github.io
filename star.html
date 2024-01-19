@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A question about trees.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  height: 100vh;
+}
+
+
+.menu {
+  display: none;
+}
+</style>
+<script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+</script>
+</head>
+<body>
+
+
+<div class="w3-sand w3-white w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MATHEUX</span></h5>
+    <p>
+        A tree is a graph that is connected and acyclic, and a star is a tree with a center that is connected to all vertices. 
+    </p>
+    <p>
+        So, now we want to prove that a tree is not a star if and only if its complement graph is connected.
+    </p>
+    <p>for the second implication we will proceed using contraposition.  </p>
+    <p>
+        \( T \) is a star \( \Longrightarrow \overline{T} \) is not connected.
+    </p>
+    <p>
+        We suppose that \( T \) is a star, so the center is isolated in  \( \overline{T} \), therefore \( \overline{T} \) is not connected.
+    </p>
+    <p>and for the first implication there are two methods, the first one is quite automatic, and presents the way we proceed generally when we try to prove connectedness.   </p>
+    <p>
+        so we suppose that \( T \) is not a star: <br>
+        and let \( x, y \in V(T) \): <br> 
+        if \( (x, y) \notin E(T) \), then \( (x, y) \in E(\overline{T}) \)
+       <br>
+        if \( (x, y) \in E(T) \), we have two cases:
+        <p> if \( x \) is a leaf, using the hypothesis that our graph is not a star, there exists a vertex \( z \) that is not connected to \( y \), so in \( \overline{T} \), \( x \) and \( y \) are connected by \( z \).  </p>
+        <p> if \( x \) and \( y \) are not leafs, then there exist \( z \) connected to \( x \), and \( t \) connected to \( y \), and as \( T \) is a tree, its vertices have not the same neighbours, so in \( \overline{T}, \) we have the chain : \( x - t - z - y \).</p>
+        <p>So the complement graph is connected.</p>
+
+        <p>Yet, we can just say: as \( T \) is a tree, there exists a leaf \( f \), and \( f \) is connected to all vertices except one, but this one is connected to another vertex, which is connected to \( f \). </p>
+        \( \square \)
+    </p>
+    <p>
+        So, i was trying to prove it using the laplacian matrix, and then prove that the cofactors are nonzero, using the Hadamard Lemma to prove that the submatrix is invertible, so its determinant is nonzero, therefore the graph has a spanning tree, so it's connected. <br>
+        To do so, i had to consider leafs, and then i thought of the last proof.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+</div>
+<footer class="w3-center w3-grayscale w3-padding-48 w3-large">
+</footer>
+
+
+</body>
+</html>
