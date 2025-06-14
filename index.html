@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ddd;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .docs {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .docs ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .docs li {
+      margin-bottom: 0.5rem;
+    }
+    .docs a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .docs a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#documents">Documents</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a web developer with a passion for creating minimalist and user-friendly websites.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some of the projects I have worked on:</p>
+      <ul>
+        <li>Project 1 - A to-do list app</li>
+        <li>Project 2 - A blog template</li>
+
+      </ul>
+    </section>
+
+    <section id="documents" class="docs">
+      <h2>Documents</h2>
+      <p>Download or view my shared documents (PDFs):</p>
+      <ul>
+        <li><a href="documents/main.pdf" target="_blank">My CV</a></li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Optional JavaScript if needed
+    console.log("Portfolio site loaded.");
+  </script>
+</body>
+</html>
