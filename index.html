@@ -138,6 +138,7 @@
       cursor: pointer;
       color: var(--highlight);
       font-weight: bold;
+      transition: opacity 0.3s ease;
     }
   </style>
 </head>
@@ -176,20 +177,32 @@
     </div>
   </div>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      const root = document.documentElement;
-      const current = root.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
+<script>
+  const toggle = document.getElementById('theme-toggle');
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', saved);
-    });
-  </script>
+  function updateButtonLabel(theme) {
+    toggle.style.opacity = 0;
+    setTimeout(() => {
+      toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+      toggle.style.opacity = 1;
+    }, 150);
+  }
+
+  toggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const current = root.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateButtonLabel(next);
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateButtonLabel(saved);
+  });
+</script>
+
 </body>
 </html>
