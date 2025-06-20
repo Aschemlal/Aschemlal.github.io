@@ -13,7 +13,7 @@
       color: #222;
     }
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
     }
@@ -46,12 +46,20 @@
       text-decoration: none;
       color: #222;
     }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
     .post {
-      margin-bottom: 2.5rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
     .post h2 {
       margin: 0.2rem 0;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
     .post small {
       color: #888;
@@ -59,11 +67,15 @@
     .post p {
       margin-top: 0.5rem;
     }
+    .post ul {
+      padding-left: 1.25rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="profile">      <div>
+    <div class="profile">
+      <div>
         <h1>Houdayfa</h1>
         <p>Mathematics student.</p>
       </div>
@@ -75,15 +87,16 @@
       <a href="#">Contact</a>
     </nav>
 
-    <div class="post">
-      <small>May, 2022 </small>
-      <h2>An alternative proof for Moser circle problem</h2>
-      <p>An alternative proof for Moser problem of dividing a circle into areas I wrote in my internship in Avignon Mathematics Laboratory.</p>
-      <ul>
-        <li><a href="documents/main.pdf" target="_blank">Moser circle problem</a></li>
-      </ul>
+    <div class="posts-grid">
+      <div class="post">
+        <small>May, 2022 </small>
+        <h2>An alternative proof for Moser circle problem</h2>
+        <p>An alternative proof for Moser problem of dividing a circle into areas I wrote in my internship in Avignon Mathematics Laboratory.</p>
+        <ul>
+          <li><a href="documents/main.pdf" target="_blank">Moser circle problem</a></li>
+        </ul>
+      </div>
     </div>
-
   </div>
 </body>
 </html>
